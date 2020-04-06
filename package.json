@@ -1,0 +1,17 @@
+{
+  "name": "appeals_shop",
+  "version": "1.0.0",
+  "description": "Acalisthenics Appeals Shop with shopping cart",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecommerce",
+    "shopping",
+    "cart",
+    "shop"
+  ],
+  "author": "German Solano (KontrolG)",
+  "license": "GPL-3.0-or-later"
+}

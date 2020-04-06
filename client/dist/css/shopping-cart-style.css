@@ -1,0 +1,84 @@
+nav,
+header {
+  /* display: none !important; */
+}
+
+.main-shopping-cart {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-shopping-cart h2 {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+/* ASIDE */
+.product-overview {
+  flex: 1 0 0;
+  height: 300px;
+  /* align-self: center;
+  margin-top: -4rem; */ 
+}
+
+.product-overview .product-card {
+  height: 100%;
+}
+
+/* SHOPPING CART LIST */
+.shopping-cart-list {
+  flex: 3 0 0;
+  padding: 0 1.25em;
+  text-align: center;
+}
+
+table {
+  box-shadow: 2.5px 2.5px 10px 0 #aaa;
+  border-radius: 5px;
+  line-height: 1.5;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-bottom: 1.25em;
+  width: 100%;
+}
+
+thead tr:last-of-type th,
+tfoot tr:first-of-type th,
+.total-amount {
+  border: none;
+  background-color: var(--secondary-black);
+  color: var(--primary-white);
+}
+
+th,
+td {
+  padding: 0.75em 1em;
+}
+
+td {
+  border-top: 2px solid #aaa;  
+}
+
+th {
+  cursor: pointer;
+}
+
+table caption {
+  margin-bottom: 1.25em;
+  font-size: 1.2em;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+th i {
+  color: #999;
+  font-size: 1.5em;
+}
+
+th.sorting-ascendent i:first-child {
+  color: inherit;
+}
+
+.css-especification-table {
+  margin: 0 auto 80px auto;
+}

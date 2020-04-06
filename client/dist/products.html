@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="German Solano (KontrolG)" />
+  <link rel="stylesheet" href="css/products-style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>INICIO - Acalisthenics</title>
+</head>
+
+<body>
+  <nav class="nav-sticky">
+    <a href="#" class="logo">
+      <img src="img/logo-white.png" alt="Acalisthenics Logo">
+      <img src="img/logo.png" alt="Acalisthenics Logo">
+    </a>
+
+    <ul class="main-nav">
+      <li><a href="/home">Inicio</a></li>
+      <li><a href="/training">Entrenamiento</a></li>
+      <li><a href="/products">Tienda</a></li>
+      <li><a class="btn-outline btn-black" href="/shopping-cart">
+          <svg aria-hidden="true" class="icon-cart" focusable="false" role="presentation" viewBox="0 0 576 512">
+            <path
+              d="M576 216v16c0 13.255-10.745 24-24 24h-8l-26.113 182.788C514.509 462.435 494.257 480 470.37 480H105.63c-23.887 0-44.139-17.565-47.518-41.212L32 256h-8c-13.255 0-24-10.745-24-24v-16c0-13.255 10.745-24 24-24h67.341l106.78-146.821c10.395-14.292 30.407-17.453 44.701-7.058 14.293 10.395 17.453 30.408 7.058 44.701L170.477 192h235.046L326.12 82.821c-10.395-14.292-7.234-34.306 7.059-44.701 14.291-10.395 34.306-7.235 44.701 7.058L484.659 192H552c13.255 0 24 10.745 24 24zM312 392V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm112 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm-224 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24z">
+            </path>
+          </svg>
+          0 Cesta 0$ USD
+        </a></li>
+    </ul>
+  </nav>
+
+  <header class="slides-container">
+    <figure class="slide slide-text-right active-slide" id="home-slide">
+      <img src="img/home.JPG" alt="Home">
+      <figcaption>
+        <h1>Bienvenido</h1>
+        <p>
+          Somos un grupo deportivo de practicantes de calistenia, el cual tiene como objetivo el desarrollo
+          físico y personal de sus miembros a través del acondicionamiento físico y el apoyo moral que se brindan entre
+          si cada
+          uno de sus integrantes.
+        </p>
+        <div class="buttons-wrapper">
+          <a href="#about-us" class="btn btn-outline">Conocenos</a>
+          <a href="/training" class="btn btn-full">Entrena con nosotros</a>
+        </div>
+      </figcaption>
+    </figure>
+    <figure class="slide" id="shop-slide">
+      <img src="img/products.jpg" alt="Products">
+      <figcaption>
+        <h2>Acastore</h2>
+        <p>
+          Obtén mayores resultados en tus entrenamientos. Ingresa ya a nuestra tienda y adquiere lo mejor en
+          indumentaria deportiva calistenica.
+        </p>
+        <div class="buttons-wrapper">
+          <a href="#" class="btn btn-full">Tienda</a>
+        </div>
+      </figcaption>
+    </figure>
+    <figure class="slide slide-text-right" id="training-slide">
+      <img src="img/training.JPG" alt="Training">
+      <figcaption>
+        <h2>Entrena con nosotros</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, eveniet molestias. Possimus perferendis veniam
+          porro? Esse, nobis aliquam, consequatur autem temporibus dolores reprehenderit porro quis ipsa, dolorum cumque
+          eum
+          odio.
+        </p>
+        <div class="buttons-wrapper">
+          <a href="#" class="btn btn-full">Entrenar</a>
+        </div>
+      </figcaption>
+    </figure>
+    <ul class="slides-container-buttons">
+      <li data-slide="home-slide" class="actual-slide">Primera</li>
+      <li data-slide="shop-slide">Segunda</li>
+      <li data-slide="training-slide">Tercera</li>
+    </ul>
+  </header>
+
+  <main class="main-shop">
+    <aside>
+      <ul class="products-categories">
+        <li><a href="#" class="active-category">All <span class="category-icon">💪</span></a></li>
+        <li><a href="#">Hot</a></li>
+        <li><a href="#">Cold</a></li>
+      </ul>
+      <hr>
+      <h4>Filtros</h4>
+      <ul>
+
+      </ul>
+    </aside>
+    <section class="products-list black-cards">
+      <h2>Equipamiento</h2>
+      <figure class="product-card">
+        <ul class="features-list">
+          <li>50 KG</li>
+          <li>Cuero</li>
+        </ul>
+        <img src="img/products.jpg" alt="{{productName}}">
+        <figcaption>
+          <ul class="product-stars">
+            <li class="star-icon">&starf;</li>
+            <li class="star-icon">&starf;</li>
+            <li class="star-icon">&starf;</li>
+            <li class="star-icon">&starf;</li>
+            <li class="star-icon">&star;</li>
+          </ul>
+          <h3>{{productName}}</h3>
+          <p>{{price}}</p>
+          <a href="#">See Product</a>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    Hecho con &hearts; y 💪 por German Solano (Co-fundador de Acalisthenics).
+  </footer>
+
+  <script>
+    'use strict';
+    /* View */
+    const slidesContainerButtons = document.querySelectorAll(".slides-container-buttons > li");
+
+    const deactiveLastSlide = () => {
+      const slideButton = document.querySelector(".actual-slide");
+      const slide = document.querySelector(".active-slide");
+      slideButton.classList.remove("actual-slide");
+      slide.classList.remove("active-slide");
+    }
+
+    const activeSlide = slideButton => {
+      const slideID = slideButton.dataset.slide;
+      const slide = document.querySelector(`#${slideID}`);
+      slideButton.classList.add("actual-slide");
+      slide.classList.add("active-slide");
+    }
+
+    /* Controller */
+    function changeSlide(e) {
+      deactiveLastSlide();
+      activeSlide(this);
+    };
+
+    slidesContainerButtons.forEach(button => button.addEventListener("click", changeSlide));
+  </script>
+</body>
+
+</html>
