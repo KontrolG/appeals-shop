@@ -53,21 +53,28 @@ ul {
   list-style: none;
 }
 
-.btn {
+button {
+  font: inherit;
+  color: inherit;
+}
+
+.btn,
+button {
   display: inline-block;
   padding: .7em;
   background: none;
-  text-shadow: 0 1px 0 var(--secondary-black);
 }
 
 .btn-outline:hover,
 .btn-outline:active {
   color: unset;
+  text-shadow: unset;
 }
 
 a.btn-outline,
 .btn-outline {
   border: 2px solid var(--primary-white);
+  text-shadow: 1px 1px 1.25px var(--secondary-black);
 }
 
 .btn-outline:hover {
@@ -125,7 +132,7 @@ a.btn-outline,
   font-size: 0.77em;
   border: 1px solid var(--primary-white);
   box-shadow: 1px 1px 5px 0px var(--secondary-black);
-  text-shadow: 1px 1px 5px var(--secondary-black);
+  text-shadow: 1px 1px 1.25px var(--secondary-black);
 }
 
 .product-card img {
@@ -158,13 +165,23 @@ a.btn-outline,
   border: 1px solid black;
 }
 
-/* XX */
+/* SITE PADDING */
 nav,
 footer,
 main,
 .slide figcaption {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  nav,
+  footer,
+  main,
+  .slide figcaption {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
 
 /* NAVIGATION */
@@ -178,7 +195,10 @@ nav {
   display: flex;
   align-items: center;
   color: var(--primary-white);
-  /* display: none; */
+}
+
+.logo {
+  margin-right: auto;
 }
 
 .logo:hover {
@@ -193,8 +213,11 @@ nav {
   display: none;
 }
 
+.navbar-toggle {
+  order: 1;
+}
+
 .main-nav {
-  margin-left: auto;
   display: none;
 }
 
@@ -209,6 +232,16 @@ nav {
   width: 1em;
   height: 1em;
   fill: currentColor;
+}
+
+.sr-only {
+  /* display: none; */
+}
+
+.icon-bar {
+  background: currentColor;
+  width: 1rem;
+  height: 0.4rem;
 }
 
 /* STICKY NAVIGATION */
@@ -228,6 +261,7 @@ nav {
 
 .nav-sticky .btn-outline.btn-black {
   border: 2px solid var(--secondary-black);
+  text-shadow: none;
 }
 
 .nav-sticky .btn-outline.btn-black:hover {
@@ -239,17 +273,74 @@ nav {
   .main-nav {
     display: flex;
   }
+
+  .navbar-toggle {
+    display: none;
+  }
 }
 
+@media only screen and (max-width: 767px) {
+  /* COLLAPSED NAVBAR */
+  .main-nav {
+    position: fixed;
+    top: 98.2px;
+    left: 0;
+    background: var(--secondary-black);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  .nav-sticky .main-nav {
+    background: inherit;
+    top: 61.5px;
+  }
+
+  .nav-sticky .main-nav > li a {
+    padding: 1em;
+    display: block;
+    margin: 0;
+  }
+
+  .nav-sticky .main-nav > li a:not(.btn-outline) {
+    padding: 1em;
+  }
+
+  .main-nav > li a:hover {
+    border: none;
+    background: var(--primary-white);
+    color: var(--secondary-black);
+  }
+
+  .nav-sticky .main-nav > li a:hover {
+    background: var(--secondary-black);
+    color: var(--primary-white);
+  }
+
+  .btn-black {
+    margin: 0.5em !important;
+  }
+
+  /* OPEN */
+  .main-nav.open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 /* HEADER */
 header {
   height: 80vh;
+  /* min-height: 450px */
 }
 
 .slides-container {
-  display: grid;
+  position: relative;
+  /* display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 100%;
+  grid-template-rows: 100%; */
 }
 
 .slides-container * {
@@ -257,11 +348,13 @@ header {
 }
 
 .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
-  position: relative;
-  grid-area: 1 / 1;
   opacity: 0.5;
-  /* z-index: -1; */
+  /* position: relative;
+  grid-area: 1 / 1; */
 }
 
 .slide.active-slide {
@@ -283,7 +376,6 @@ header {
   padding-top: 2rem;
   display: flex;
   justify-content: center;
-  text-shadow: 0 1px 0 var(--secondary-black);
   text-align: center;
   align-items: center;
   flex-flow: column nowrap;
@@ -301,6 +393,7 @@ header {
 
 .slide figcaption p {
   width: 60%;
+  text-shadow: 1px 1px 1.25px var(--secondary-black);
 }
 
 .slide .buttons-wrapper {
@@ -314,6 +407,8 @@ header {
 .slides-container-buttons {
   padding: 1.5rem;
   transform: translateY(-100%);
+  position: relative;
+  top: 100%;
   text-align: center;
   z-index: 10;
 }
