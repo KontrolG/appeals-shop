@@ -1,16 +1,47 @@
 nav,
 header {
-  /* display: none !important; */
+  display: none !important;
 }
 
 /* ASIDE */
 .main-shop {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 aside {
-  flex: 1 0 0;
-  margin-right: 2.5rem;
+  min-width: 200px;
+  flex: 1 1 auto;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+aside > * {
+  flex: 0 0 50%;
+  padding: 0.5rem;
+}
+
+aside h3 {
+  height: min-content;
+  order: -1;
+}
+
+@media only screen and (min-width: 1048px) {
+  aside {
+    flex-direction: column;
+  }
+
+  aside h3 {
+  order: 0;
+  }
+
+  aside > * {
+    flex: 0 0 auto;
+    padding: 0;
+  }
 }
 
 .products-categories li a {
@@ -36,7 +67,8 @@ a .category-icon {
   grid-template-columns: repeat(3, 200px);
   grid-template-rows: 1rem;
   grid-auto-rows: 300px;
-  gap: 2rem;
+  gap: 1.75rem;
+  justify-content: center;
 }
 
 .products-list h2 {
